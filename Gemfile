@@ -12,7 +12,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -32,6 +32,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'mysql2'
+
+# 環境別コンフィグ
 gem 'rails_config'
 
 # ページング
@@ -41,6 +44,11 @@ gem 'kaminari'
 gem 'dalli'
 # 認証周り
 gem 'devise'
+# いい感じのデザイン
+gem 'twitter-bootswatch-rails', '~> 3.1.1'
+gem 'twitter-bootswatch-rails-helpers'
+gem 'execjs'
+gem 'less-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -54,6 +62,9 @@ group :development, :test do
 
   # エラー画面を綺麗に
   gem 'better_errors'
+
+  # メールテスト
+  gem 'letter_opener_web', '~> 1.2.0'
 
   gem 'pry'
   gem 'pry-doc'
